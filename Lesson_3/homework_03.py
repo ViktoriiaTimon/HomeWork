@@ -140,5 +140,5 @@ tank_capacity = 48
 total_gasoline = distance / 100 * gasoline_consumption
 print(f'{total_gasoline} літрів палива')
 needed_refules = int(total_gasoline / tank_capacity)
-print(f'{needed_refules}заправок')
+print(f'{needed_refules} заправок')
 
