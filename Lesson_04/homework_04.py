@@ -23,20 +23,20 @@ rolling in wealth."""
 # task 01 ==
 """ Дані у строці adwentures_of_tom_sawer розбиті випадковим чином, через помилку.
 треба замінити кінець абзацу на пробіл .replace("\n", " ")"""
-new = adwentures_of_tom_sawer.replace("\n", " ")
-print(new)
+adwentures_of_tom_sawer = adwentures_of_tom_sawer.replace("\n", " ")
+print(adwentures_of_tom_sawer)
 # task 02 ==
 
 """ Замініть .... на пробіл
 """
-dot_off = new.replace("....", " ")
-print (dot_off)
+adwentures_of_tom_sawer = adwentures_of_tom_sawer.replace("....", " ")
+print (adwentures_of_tom_sawer)
 
 # task 03 ==
 """ Зробіть так, щоб у тексті було не більше одного пробілу між словами.
 """
-gap_off = dot_off.split()
-line = " ".join(dot_off.split())
+adwentures_of_tom_sawer = adwentures_of_tom_sawer.split()
+line = " ".join(adwentures_of_tom_sawer)
 print(line)
 
 # task 04
