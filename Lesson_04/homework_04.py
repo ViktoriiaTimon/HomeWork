@@ -88,6 +88,6 @@ for sentence in adwentures_of_tom_sawer_sentences:
 """ Виведіть кількість слів останнього речення з adwentures_of_tom_sawer_sentences.
 """
 if adwentures_of_tom_sawer_sentences[-1].strip() == '':
-    last_sentence = adwentures_of_tom_sawer_sentences[-2].strip()
+    last_sentence = adwentures_of_tom_sawer_sentences[-2].strip() #the last sentence is empty so we use the nex one - penultimate sentence
 print(last_sentence)
 print(len(last_sentence.split()))
