@@ -3,6 +3,7 @@
 # write code that will help us to get cars that satisfy search_criteria.
 # Cars should be sorted by price ascending.
 # We should print up to five (5) first found elements
+
 car_data = {
   'Mercedes': ('silver', 2019, 1.8, 'sedan', 50000),
   'Audi': ('black', 2020, 2.0, 'sedan', 55000),
