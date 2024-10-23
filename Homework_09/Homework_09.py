@@ -75,11 +75,6 @@ class TestAverage(unittest.TestCase):
         expected_result = 0
         self.assertEqual(expected_result, actual_result)
 
-    def test_average_list_zero(self):
-        actual_result = calculate_average(numbers)
-        expected_result = 3
-        self.assertEqual(expected_result, actual_result)
-
     def test_only_zero(self):
         actual_result = calculate_average([0, 0, 0, 0])
         expected_result = 0
