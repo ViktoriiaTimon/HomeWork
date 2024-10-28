@@ -1,20 +1,19 @@
+import logging
+
 from .test_homework_10 import log_event
 
 import pytest
 
 class TestUserLogging():
 
-    def test_success_loging(self):
-        log_event(username = 'Tom', status = "success")
+    @pytest.mark.parametrize("username, status, expected_level",
+    [
+        ("Tom", "success", logging.INFO),
+        ("Tom", "expired", logging.WARNING),
+        ("Tom", "failed", logging.ERROR),
+        ("Tom", None, logging.ERROR),
+        ("Tom", " ", logging.ERROR),
+    ])
 
-    def test_expired_password(self):
-        log_event(username = 'Tom', status = "expired")
-
-    def test_failed(self):
-        log_event(username='Tom', status = "failed")
-
-    def test_none_data(self):
-        log_event(username='Tom', status = None)
-
-    def test_empty_data(self):
-        log_event(username='Tom', status = "")
+    def test_logging_levels(self, username, status, expected_level):
+        log_event(username, status) == expected_level
