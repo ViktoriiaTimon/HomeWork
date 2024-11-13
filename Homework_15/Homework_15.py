@@ -9,21 +9,21 @@ class Rombus:
             if value <= 0:
                 print("Side must be greater than 0.")
             else:
-                self.__dict__[name] = value
+                super().__setattr__(name, value)
         elif name == "conner_a":
             if 0 <= value >= 180:
                 print(f"Conner '{name}' must be between 0 and 180 degrees.")
             else:
-                self.__dict__[name] = value
+                super().__setattr__(name, value)
                 self.__dict__["conner_b"] = 180 - value
         elif name == "conner_b":
             if 0 <= value >= 180:
                 print(f"Conner '{name}' must be between 0 and 180 degrees.")
             else:
-                if self.__dict__.get("conner_a", 0) + value != 180:
+                 if self.conner_a + value != 180:
                     print("The sum of conner must be 180 degrees.")
                 else:
-                    self.__dict__[name] = value
+                    super().__setattr__(name, value)
                     self.__dict__["conner_a"] = 180 - value
 
 # Testing the code
