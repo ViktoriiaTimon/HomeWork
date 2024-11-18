@@ -21,6 +21,7 @@ class Rombus:
                 print(f"Conner '{name}' must be between 0 and 180 degrees.")
             else:
                 if self.conner_a + value != 180:
+
                     print("The sum of conner must be 180 degrees.")
                 else:
                     super().__setattr__(name, value)
