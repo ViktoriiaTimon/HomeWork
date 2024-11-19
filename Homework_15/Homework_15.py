@@ -20,14 +20,15 @@ class Rombus:
             if 0 <= value >= 180:
                 print(f"Conner '{name}' must be between 0 and 180 degrees.")
             else:
-                 if self.conner_a + value != 180:
+                if self.conner_a + value != 180:
+
                     print("The sum of conner must be 180 degrees.")
                 else:
                     super().__setattr__(name, value)
                     self.__dict__["conner_a"] = 180 - value
 
 # Testing the code
-romb = Rombus(10, 99)
+romb = Rombus(10, 79)
 print(romb.conner_a)
 print(romb.conner_b)
 
