@@ -90,7 +90,7 @@ def get_country(first_name=None):
     else:
         filteredData = []
         for data in countryFile:
-            if data[12] != '':
+            if data[3] !='':
                 filteredData.append(data[12])
         country = choice(filteredData)
     return country
@@ -282,7 +282,7 @@ def get_birthdate(startAge=None, endAge=None, _format="%d %b, %Y"):
 def get_address():
     full_addr = []
     addrParam = ['street', 'landmark', 'area', 'city', 'state', 'country', 'pincode']
-    for i in range(5, 10):
+    for i in range(len(addrParam)):
         addrFile = csv.reader(open(full_path('data.csv'), 'r'))
         allAddrs = []
         for addr in addrFile:
