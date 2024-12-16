@@ -24,7 +24,6 @@ def read_log(input_file = "hblog.txt", key = "Key TSTFEED0300|7E3E|0400"):
                 filtered_log.append(line.strip())
     print(filtered_log)
     return filtered_log
-read_log()
 
 def timestamp(line_with_key):
     try:
@@ -48,6 +47,10 @@ def heartbeat(filtered_log):
                 logger.error(f"ERROR! Time difference >= {time_difference} seconds ")
             else:
                 logger.info(f"Don't worry! The heartbeat is not in the searching bad range")
+        else:
+            logger.error("ERROR! Failed to parse timestamps. Values: "
+                     f"time_1={time_1}, time_2={time_2}")
+
 
 def function_scope():
     input_file = "hblog.txt"
