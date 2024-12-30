@@ -70,11 +70,9 @@ def test_get_cars(authorized_session, sort_by, limit):
 
     logger.info(f'Server response is {cars}')
 
-    # Ensure logs are written before finishing the test
     for handler in logging.root.handlers:
         handler.flush()
 
-    # Verify if log file has been updated (additional check)
     if os.path.exists(log_path):
         with open(log_path, 'r') as log_file:
             content = log_file.read()
