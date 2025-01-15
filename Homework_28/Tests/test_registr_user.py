@@ -21,8 +21,10 @@ def test_user_registration(driver):
         password="!123Abc!"
     )
     registration_page.submit_registration()
-
+    check_registration = registration_page.is_registration_successful()
+    
     if registration_page.is_registration_successful():
         print("Registration successful")
     else:
         print("User already exists")
+    assert check_registration, "User wasnt registered"
