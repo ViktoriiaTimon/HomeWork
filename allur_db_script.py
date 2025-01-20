@@ -14,7 +14,6 @@ def get_connection():
         password=os.getenv("DB_PASSWORD"),
     )
 
-
 @allure.step("Table allure_users creation with user data")
 def create_table_and_insert_data(conn):
     try:
