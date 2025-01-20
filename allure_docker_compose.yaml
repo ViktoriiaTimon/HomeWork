@@ -1,0 +1,25 @@
+version: '3.9'
+
+services:
+  pg_db:
+    image: db.allure
+    environment:
+      POSTGRES_USER: test_user1
+      POSTGRES_PASSWORD: test_password
+      POSTGRES_DB: test_db
+    command: postgres -c listen_addresses='*' -c port=5433
+    ports:
+      - "5433:5433"
+
+  app:
+    build:
+      context: .
+    depends_on:
+      - pg_db
+    environment:
+      DB_HOST: pg_db
+      DB_PORT: 5433
+      DB_NAME: test_db
+      DB_USER: test_user1
+      DB_PASSWORD: test_password
+      command: sh -c "sleep 10 && python allure_db_script.py"
