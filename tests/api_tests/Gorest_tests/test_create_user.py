@@ -8,7 +8,7 @@ import time  # time.time()
 import allure
 
 from settings import settings
-from test.api_tests.base_api_test import BaseApiTests
+from tests.api_tests.base_api_test import BaseApiTests
 
 
 @allure.step('Getting static user data')
