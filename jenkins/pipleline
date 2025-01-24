@@ -33,7 +33,9 @@ pipeline {
             steps {
                 sh '''
                     #!/bin/bash
+                    set -e
                     . venv/bin/activate
+                    export PYTHONPATH=/var/jenkins_home/workspace/homework_allure:$PYTHONPATH
                     mkdir -p allure-results
                     pytest tests/api_tests/Gorest_tests/test_create_user.py --alluredir=allure-results
                 '''
