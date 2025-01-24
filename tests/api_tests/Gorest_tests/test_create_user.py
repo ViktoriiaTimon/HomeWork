@@ -1,14 +1,14 @@
 import pytest
 import os
 
-from dto_user import UserSchema
-from gorest_ctrl import GorestCtrl
+from core.api.gorest.dto_user import UserSchema
+from core.api.gorest.gorest_ctrl import GorestCtrl
 import time  # time.time()
 
 import allure
 
 from settings import settings
-from base_api_test import BaseApiTests
+from test.api_tests.base_api_test import BaseApiTests
 
 
 @allure.step('Getting static user data')
