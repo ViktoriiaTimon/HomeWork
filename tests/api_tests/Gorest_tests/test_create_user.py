@@ -1,14 +1,14 @@
 import pytest
 import os
 
-from HomeWork.core.api.gorest.dto_user import UserSchema
-from HomeWork.core.api.gorest.gorest_ctrl import GorestCtrl
-import time  # time.time() - повертає поточний час в секундах
+from core.api.gorest.dto_user import UserSchema
+from core.api.gorest.gorest_ctrl import GorestCtrl
+import time  # time.time()
 
 import allure
 
-from HomeWork.settings import settings
-from HomeWork.tests.api_tests.base_api_test import BaseApiTests
+from settings import settings
+from tests.api_tests.base_api_test import BaseApiTests
 
 
 @allure.step('Getting static user data')
