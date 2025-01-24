@@ -1,8 +1,8 @@
 import pytest
 import os
 
-from core/api/gorest.dto_user import UserSchema
-from core/api/gorest.gorest_ctrl import GorestCtrl
+from core.api.gorest.dto_user import UserSchema
+from core.api.gorest.gorest_ctrl import GorestCtrl
 import time  # time.time()
 
 import allure
