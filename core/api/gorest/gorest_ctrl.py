@@ -1,4 +1,4 @@
-from HomeWork.core.api.rest_base import RestBase
+from core.api.rest_base import RestBase
 
 
 class GorestCtrl(RestBase):
