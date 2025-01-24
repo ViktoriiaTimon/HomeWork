@@ -28,7 +28,7 @@ def validate_data(res):
 @allure.feature('Gorest')
 @allure.story('Creating users')
 @allure.title("Create user positive")
-@pytest.mark.gorest
+#@pytest.mark.gorest
 def test_create_user():
     user_data = get_user_data()
 
@@ -50,7 +50,7 @@ def test_create_user():
 
 @allure.title("Create user negative")
 @pytest.mark.negative
-@pytest.mark.gorest
+#@pytest.mark.gorest
 def test_create_user_auth_problem():
     user_data = {"name": "Tenali Ramakrishna",
                  "gender": "male",
@@ -61,7 +61,7 @@ def test_create_user_auth_problem():
 
 
 @pytest.mark.negative
-@pytest.mark.gorest
+#@pytest.mark.gorest
 def test_create_for_checking_user_email_at_prod():
     assert  settings.USER_EMAIL == 'test+prod@test.com'
     assert os.getenv('SECRET_PHRASE', None) == 'secret'
