@@ -35,7 +35,7 @@ pipeline {
                     #!/bin/bash
                     . venv/bin/activate
                     mkdir -p allure-results
-                    pytest -m tests/test_create_user.py --alluredir=allure-results
+                    pytest -m tests/api_tests/Gorest_tests/test_create_user.py --alluredir=allure-results
                 '''
             }
         }
